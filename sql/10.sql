@@ -3,8 +3,8 @@
  * Use tables film and film_actor.
  */
 
-SELECT f.title, f.film_id, count(fa.actor_id) AS actor_count
-FROM film f
-JOIN film_actor fa ON f.film_id = fa.film_id
-GROUP BY f.film_id, f.title
-ORDER BY actor_count, f.film_id ASC;
+SELECT film.title, film.film_id, COUNT(film_actor.actor_id) AS actor_count
+FROM film
+INNER JOIN film_actor ON film.film_id = film_actor.film_id
+GROUP BY film.title,film.film_id
+ORDER BY COUNT(film_actor.actor_id), film.title;
