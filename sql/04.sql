@@ -4,6 +4,6 @@
  * Use the count() aggregation function and the rental_rate column of the film table.
  */
 
-SELECT count(*) AS total_films
+SELECT count(*)
 FROM film
 WHERE rental_rate < 1.00;

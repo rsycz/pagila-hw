@@ -5,5 +5,5 @@
 
 SELECT actor_id
 FROM actor
-WHERE LOWER(first_name) LIKE "j%"
+WHERE LOWER(first_name) LIKE 'j%'
 ORDER BY actor_id ASC;

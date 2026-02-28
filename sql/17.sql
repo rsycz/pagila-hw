@@ -5,7 +5,7 @@
  * Order by country alphabetically.
  */
 
-SELECT co.country, sum(p.amount) AS total_profit
+SELECT co.country, sum(p.amount) AS profit
 FROM country co
 JOIN city ci ON co.country_id = ci.country_id
 JOIN address a ON ci.city_id = a.city_id
